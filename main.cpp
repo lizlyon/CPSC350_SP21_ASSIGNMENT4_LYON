@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "DNA.h"
+#include "DNAComplement.h"
 #include "RPNCalc.h"
 
 using namespace std;
