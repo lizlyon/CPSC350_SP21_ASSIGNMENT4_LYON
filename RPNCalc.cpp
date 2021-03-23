@@ -1,11 +1,17 @@
 #include <iostream>
 #include <sstream>
 #include "RPNCalc.h"
+
 using namespace std;
 
+RPNCalc::RPNCalc(){
+}
+
+RPNCalc::~RPNCalc(){
+}
+
 void RPNCalc::calculate(std::string& operand){
-	int x = 0, y = 0;
-	int total = 0, value = 0;
+	int x, y, total, value;
 
 	//reads in the string expression using istringstream
 	istringstream sin(operand);
