@@ -27,9 +27,10 @@
 * https://www.geeksforgeeks.org/stack-set-3-reverse-string-using-stack/
 * https://www.programiz.com/cpp-programming/library-function/cmath/sin
 * https://www.cplusplus.com/reference/sstream/istringstream/
+* https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp
 
 ## Known errors
-* my reverse and complement are backwords..something is not right there
+* my DNA works for one line of txt, it formats incorrectly with multiple lines
 
 ## Build instructions 
 * g++ *.cpp -o assigment4.exe
