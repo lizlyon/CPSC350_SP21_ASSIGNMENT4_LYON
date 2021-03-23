@@ -1,5 +1,5 @@
-#ifndef Stack_H
-#define Stack_H
+#ifndef GENSTACK_H
+#define GENSTACK_H
 #include <cstdlib>
 
 template <typename T>
@@ -47,7 +47,7 @@ template <typename T>
 GenStack<T>::~GenStack(){
 	//create new node
 	ListNode<T>* current = top;
-
+	//delete 
 	while (current != NULL){
 		ListNode<T>* temp = current;
 		current = current->next;
