@@ -1,13 +1,18 @@
-#include "DNA.h"
+#include "DNAComplement.h"
 #include <iostream>
 #include <string>
 #include <fstream>
 
 using namespace std;
 
+Dna::Dna(){
+}
+
+Dna::~Dna(){
+}
+
 string Dna::compute(string userFilePath){
-	string complement = "";
-	string line;
+	string complement, line;
 	GenStack<string> dnaStack;
 
 	ifstream inFile(userFilePath);
@@ -15,6 +20,7 @@ string Dna::compute(string userFilePath){
 	if (inFile.is_open()){
 		while(getline(inFile, line)){
 			//push the line to  stack
+			inFile >> line;
 			dnaStack.push(line);
 
 			for (int i = 0; i < line.length(); i++) {
@@ -44,8 +50,8 @@ string Dna::compute(string userFilePath){
 		ofstream outFile;
 		outFile.open("dnaoutput.txt");
 		outFile << "Sequence: " << line << endl;
-		outFile << "Complement: " << reverse(complement)  << " " << endl;
-		outFile << "Reverse complement: " << (complement) << " " << endl;
+		outFile << "Complement: " << complement  << " " << endl;
+		outFile << "Reverse complement: " << reverse(complement) << " " << endl;
 		//close outfile
 		outFile.close();
 	}
@@ -59,7 +65,7 @@ string Dna::reverse(const string& complement){
 	string reverse;
 	GenStack<char> revStack;
 
-	for (size_t i = 0; i < complement.size(); i++){
+	for (int i = 0; i < complement.size(); i++){
 		//get the complement on the top of stack
 		revStack.push(complement[i]);
 	}
